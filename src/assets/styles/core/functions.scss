@@ -1,0 +1,4 @@
+$defaultFontSize: 18;
+@function rem($pixels) {
+  @return ($pixels / $defaultFontSize * 1rem);
+}
