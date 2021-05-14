@@ -50,7 +50,12 @@
 
 .advanced {
   font-family: $font-rubik;
-  min-height: 50vh;
+  @include desktop() {
+    min-height: 50vh;
+  }
+  @include desktoplg() {
+    min-height: 40vh;
+  }
   position: relative;
   bottom: -10rem;
   &__info {
@@ -68,11 +73,18 @@
 
 .characteristic {
   font-family: $font-rubik;
-  min-height: 60vh;
+  @include desktop() {
+    min-height: 60vh;
+  }
+  @include desktoplg() {
+    min-height: 50vh;
+  }
   position: relative;
   .line--green {
     position: absolute;
-    top: 30%;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1;
     height: rem(10);
     width: 80%;
