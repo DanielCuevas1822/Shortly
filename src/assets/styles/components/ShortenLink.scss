@@ -7,12 +7,14 @@
   background-color: $dark-violet;
   background-size: cover;
   position: relative;
-  bottom: -4.5rem;
+  
   @include tablet() {
     padding: rem(20);
+    bottom: -2.5rem;
   }
   @include desktop() {
     padding: rem(50);
+    bottom: -4.5rem;
   }
   border-radius: rem(10);
   &__form {

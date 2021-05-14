@@ -50,14 +50,18 @@
 
 .advanced {
   font-family: $font-rubik;
+  position: relative;
+  @include tablet() {
+    min-height: 25vh;
+    bottom: -5rem;
+  }
   @include desktop() {
     min-height: 50vh;
+    bottom: -10rem;
   }
   @include desktoplg() {
     min-height: 40vh;
   }
-  position: relative;
-  bottom: -10rem;
   &__info {
     text-align: center;
     &__title {
@@ -73,6 +77,9 @@
 
 .characteristic {
   font-family: $font-rubik;
+  @include tablet() {
+    min-height: 45vh;
+  }
   @include desktop() {
     min-height: 60vh;
   }
@@ -109,7 +116,13 @@
     }
   }
   &__card {
-    padding: rem(10) rem(30);
+    @include tablet() {
+      padding: rem(10) rem(20);
+    }
+    @include desktop() {
+      padding: rem(10) rem(30);
+    }
+
     background-color: white;
     .circle {
       width: rem(80);
@@ -147,7 +160,12 @@
 .started {
   font-family: $font-rubik;
   &__info {
-    min-height: 35vh;
+    @include tablet() {
+      min-height: 25vh;
+    }
+    @include desktop() {
+      min-height: 35vh;
+    }
     display: flex;
     flex-direction: column;
     justify-content: center;

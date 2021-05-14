@@ -9,7 +9,13 @@
 .footer {
   font-family: $font-rubik;
   color: white;
-  padding: rem(60) 0;
+  @include tablet() {
+    padding: rem(50) 0;
+  }
+  @include desktop() {
+    padding: rem(60) 0;
+  }
+
   &__img {
     &__logo {
       -webkit-filter: invert(100%);
