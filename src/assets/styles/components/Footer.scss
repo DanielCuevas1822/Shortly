@@ -1,0 +1,44 @@
+@import "../core/variables.scss";
+@import "../core/functions.scss";
+@import "../core/mixins.scss";
+
+.bg--dark-violet {
+  background-color: $very-dark-violet;
+}
+
+.footer {
+  font-family: $font-rubik;
+  color: white;
+  padding: rem(60) 0;
+  &__img {
+    &__logo {
+      -webkit-filter: invert(100%);
+      filter: invert(100%);
+      height: rem(28);
+    }
+  }
+  &__links {
+    &__nav {
+      display: flex;
+      justify-content: space-between;
+      ul {
+        margin: 0;
+        padding: 0;
+        font-weight: 700;
+      }
+      li {
+        list-style: none;
+        padding-bottom: rem(10);
+        font-weight: 500;
+        color: $grayish-violet;
+      }
+    }
+  }
+  &__social {
+    display: flex;
+    justify-content: space-evenly;
+    &__img {
+      max-height: rem(25);
+    }
+  }
+}

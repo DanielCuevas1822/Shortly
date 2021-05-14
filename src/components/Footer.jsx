@@ -1,31 +1,39 @@
 import React from "react";
 
+import "../assets/styles/components/Footer.scss";
+
+import logo from "../assets/img/logo.svg";
+import facebook from "../assets/img/icon-facebook.svg";
+import instagram from "../assets/img/icon-instagram.svg";
+import twitter from "../assets/img/icon-twitter.svg";
+import pinterest from "../assets/img/icon-pinterest.svg";
+
 const Footer = () => {
   return (
-    <footer>
+    <footer className="bg--dark-violet">
       <div className="container">
-        <div className="row">
-          <div className="col-5">
-            <img src="" alt="logo" />
+        <div className="row footer">
+          <div className="col-4 footer__img">
+            <img className="footer__img__logo" src={logo} alt="logo" />
           </div>
-          <div className="col-4">
-            <nav>
+          <div className="col-5 footer__links">
+            <nav className="footer__links__nav">
               <ul>
-                Features
+                <p>Features</p>
                 <li>Link Shortening</li>
                 <li>Branded Links</li>
                 <li>Analytics</li>
               </ul>
 
               <ul>
-                Resources
+                <p>Resources</p>
                 <li>Blog</li>
                 <li> Developers</li>
                 <li>Support</li>
               </ul>
 
               <ul>
-                Company
+                <p>Company</p>
                 <li> About</li>
                 <li> Our</li>
                 <li>Team</li>
@@ -34,11 +42,23 @@ const Footer = () => {
               </ul>
             </nav>
           </div>
-          <div className="col-3">
-            <img src="" alt="facebook" />
-            <img src="" alt="twitter" />
-            <img src="" alt="pinterest" />
-            <img src="" alt="instagram" />
+          <div className="col-3 footer__social">
+            <img
+              className="footer__social__img"
+              src={facebook}
+              alt="facebook"
+            />
+            <img className="footer__social__img" src={twitter} alt="twitter" />
+            <img
+              className="footer__social__img"
+              src={pinterest}
+              alt="pinterest"
+            />
+            <img
+              className="footer__social__img"
+              src={instagram}
+              alt="instagram"
+            />
           </div>
         </div>
       </div>
