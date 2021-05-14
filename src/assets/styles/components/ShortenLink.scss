@@ -1,0 +1,37 @@
+@import "../core/variables.scss";
+@import "../core/functions.scss";
+@import "../core/mixins.scss";
+
+.shorten {
+  font-family: $font-rubik;
+  background-color: $dark-violet;
+  background-size: cover;
+  position: relative;
+  bottom: -4.5rem;
+  @include tablet() {
+    padding: rem(20);
+  }
+  @include desktop() {
+    padding: rem(50);
+  }
+  border-radius: rem(10);
+  &__form {
+    display: flex;
+    &__input {
+      width: 85%;
+      margin-right: rem(18);
+    }
+    &__btn {
+      width: 15%;
+      border-radius: rem(10);
+      font-weight: 700;
+
+      @include tablet() {
+        padding: rem(10) 0;
+      }
+      @include desktop() {
+        padding: rem(20) 0;
+      }
+    }
+  }
+}
