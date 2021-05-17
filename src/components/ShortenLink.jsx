@@ -5,7 +5,7 @@ import "../assets/styles/components/Buttons.scss";
 
 const ShortenLink = () => {
   return (
-    <section>
+    <section className="shorten__section">
       <div className="container">
         <div
           className="row shorten"

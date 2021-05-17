@@ -7,24 +7,54 @@
   background-color: $dark-violet;
   background-size: cover;
   position: relative;
+  @include mobil() {
+    padding: rem(20) rem(20) 0 rem(20);
+    bottom: -5.5rem;
+  }
   
   @include tablet() {
-    padding: rem(20);
-    bottom: -2.5rem;
-  }
-  @include desktop() {
     padding: rem(50);
     bottom: -4.5rem;
   }
   border-radius: rem(10);
+  &__section {
+    @include mobil() {
+      padding: 0 1rem;
+    }
+    @include tablet() {
+      padding: 0;
+    }
+  }
   &__form {
     display: flex;
+    @include mobil() {
+      flex-direction: column;
+    }
+    @include tablet() {
+      flex-direction: row;
+    }
     &__input {
-      width: 85%;
-      margin-right: rem(18);
+      @include mobil() {
+        width: 100%;
+        margin: 0 0 rem(20) 0;
+        padding: rem(20);
+      }
+      @include tablet() {
+        width: 85%;
+        margin-right: rem(18);
+        padding: rem(0);
+      }
     }
     &__btn {
-      width: 15%;
+      @include mobil() {
+        width: 100%;
+        margin: 0 0 rem(20) 0;
+        padding: rem(20);
+      }
+      @include tablet() {
+        width: 15%;       
+        padding: rem(0);
+      }
       border-radius: rem(10);
       font-weight: 700;
 
