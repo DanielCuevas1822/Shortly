@@ -13,17 +13,30 @@
 .hero {
   font-family: $font-rubik;
   padding: rem(30) 0;
+  @include mobil() {
+    flex-direction: column-reverse;
+  }
   @include tablet() {
     min-height: 30vh;
+    flex-direction: row;
   }
-
   @include desktop() {
     min-height: 50vh;
   }
   &__info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center;    
+    @include mobil() {
+      text-align: center;
+      align-items: center;
+      padding: rem(50) 0 0 0;
+    }
+    @include tablet() {
+      text-align: left;
+      align-items: unset;
+      padding: 0;
+    }
     &__title {
       color: $very-dark-violet;
       font-weight: 700;
@@ -33,7 +46,7 @@
       margin-bottom: rem(15);
     }
     &__btn {
-      max-width: rem(180);
+      width: rem(180);
       border-radius: rem(30);
       padding: rem(10) 0;
     }
@@ -51,16 +64,20 @@
 .advanced {
   font-family: $font-rubik;
   position: relative;
+  @include mobil() {
+    min-height: 30vh;
+    bottom: -8rem;
+  }
   @include tablet() {
-    min-height: 25vh;
-    bottom: -5rem;
+    min-height: 20vh;
+    bottom: -8rem;
   }
   @include desktop() {
-    min-height: 50vh;
+    min-height: 40vh;
     bottom: -10rem;
   }
   @include desktoplg() {
-    min-height: 40vh;
+    min-height: 30vh;
   }
   &__info {
     text-align: center;
@@ -77,6 +94,9 @@
 
 .characteristic {
   font-family: $font-rubik;
+  @include mobil() {
+    padding: rem(60) 0;
+  }
   @include tablet() {
     min-height: 45vh;
   }
@@ -90,13 +110,19 @@
   .line--green {
     position: absolute;
     top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 1;
     height: rem(10);
-    width: 80%;
     color: $cyan;
     opacity: 1;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 80%;
+    @include mobil() {
+      opacity: 0;
+    }
+    @include tablet() {
+      opacity: 1;
+    }
   }
   .card {
     &-one {
@@ -115,9 +141,24 @@
       z-index: 100;
     }
   }
+  &__section {
+    @include mobil() {
+      padding: 0 1rem;
+    }
+    @include tablet() {
+      padding: 0;
+    }
+  }
   &__card {
+    @include mobil() {
+      text-align: center;
+      padding: 0 rem(35) rem(35) rem(35);
+      margin-top: rem(30);
+    }
     @include tablet() {
       padding: rem(10) rem(20);
+      margin-top: rem(0);
+      text-align: left;
     }
     @include desktop() {
       padding: rem(10) rem(30);
@@ -132,7 +173,16 @@
       border-radius: 50%;
       background: $dark-violet;
       position: relative;
-      top: -2.5rem;
+      @include mobil() {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      @include tablet() {
+        top: -2.5rem;
+        left: unset;
+        transform: unset;
+      }
     }
     &__image {
       display: flex;
@@ -160,7 +210,7 @@
 .started {
   font-family: $font-rubik;
   &__info {
-    @include tablet() {
+    @include mobil() {
       min-height: 25vh;
     }
     @include desktop() {

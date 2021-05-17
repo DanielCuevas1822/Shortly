@@ -50,13 +50,12 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg--gray">
+      <section className="bg--gray characteristic__section">
         <div className="container">
           <div className="row characteristic">
+            <hr className="line--green" />
 
-            <hr className="line--green"/>
-
-            <div className="col-4 card-one">
+            <div className="col-md-4 col-sm-12 card-one">
               <div className="characteristic__card">
                 <div className="characteristic__card__image circle">
                   <img src={recognition} alt="recognition" />
@@ -70,7 +69,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="col-4 card-two">
+            <div className="col-md-4 col-sm-12 card-two">
               <div className="characteristic__card">
                 <div className="characteristic__card__image circle">
                   <img src={records} alt="records" />
@@ -84,7 +83,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="col-4 card-three">
+            <div className="col-md-4 col-sm-12 card-three">
               <div className="characteristic__card">
                 <div className="characteristic__card__image circle">
                   <img src={customizable} alt="customizable" />
@@ -98,7 +97,6 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            
           </div>
         </div>
       </section>
