@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "../assets/styles/components/ShortenLink.scss";
 import "../assets/styles/components/Buttons.scss";
 
 const ShortenLink = () => {
+  const [link, setLink] = useState("");
+  const [error, setError] = useState(false);
+  const handleChange = (e) => {
+    setLink(e.target.value);
+    setError(false);
+  };
+  const handleClick = (e) => {
+    e.preventDefault();
+
+    if (link) {
+    } else {
+      setError(true);
+    }
+  };
   return (
     <section className="bg--gray shorten__section">
       <div className="container">
@@ -14,13 +28,24 @@ const ShortenLink = () => {
           <div className="col-12">
             <form className="shorten__form">
               <input
-                className="shorten__form__input"
+                className={`shorten__form__input ${error ? "error" : null}`}
                 type="text"
                 name=""
-                id=""
+                id="mylink"
                 placeholder="Shorten a link here..."
+                value={link}
+                onChange={handleChange}
               />
-              <button className="shorten__form__btn btn--green" type="submit">
+              {error ? (
+                <small id="error-desc" className="error">
+                  Please add link
+                </small>
+              ) : null}
+              <button
+                onClick={handleClick}
+                className="shorten__form__btn btn--green"
+                type="submit"
+              >
                 Shorten it!
               </button>
             </form>
