@@ -5,7 +5,7 @@ import "../assets/styles/components/Buttons.scss";
 
 const ShortenLink = () => {
   return (
-    <section className="shorten__section">
+    <section className="bg--gray shorten__section">
       <div className="container">
         <div
           className="row shorten"
@@ -24,6 +24,38 @@ const ShortenLink = () => {
                 Shorten it!
               </button>
             </form>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12 link">
+            <div className="link__item">
+              <p className="link__item__original">
+                https://www.youtube.com/watch?v=hrGsV80Ke4Q
+              </p>
+              <hr />
+              <p className="link__item__shorted">shrtco.de/FuHBxz</p>
+              <button className="link__item__btn btn--green">Copy</button>
+            </div>
+          </div>
+          <div className="col-12 link">
+            <div className="link__item">
+              <p className="link__item__original">
+                https://www.youtube.com/watch?v=hrGsV80Ke4Q
+              </p>
+              <hr />
+              <p className="link__item__shorted">shrtco.de/FuHBxz</p>
+              <button className="link__item__btn btn--green">Copy</button>
+            </div>
+          </div>
+          <div className="col-12 link">
+            <div className="link__item">
+              <p className="link__item__original">
+                https://www.youtube.com/watch?v=hrGsV80Ke4Q
+              </p>
+              <hr />
+              <p className="link__item__shorted">shrtco.de/FuHBxz</p>
+              <button className="link__item__btn btn--green">Copy</button>
+            </div>
           </div>
         </div>
       </div>

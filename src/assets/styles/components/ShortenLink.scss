@@ -6,15 +6,13 @@
   font-family: $font-rubik;
   background-color: $dark-violet;
   background-size: cover;
-  position: relative;
+
   @include mobil() {
     padding: rem(20) rem(20) 0 rem(20);
-    bottom: -5.5rem;
   }
-  
+
   @include tablet() {
     padding: rem(50);
-    bottom: -4.5rem;
   }
   border-radius: rem(10);
   &__section {
@@ -52,18 +50,56 @@
         padding: rem(20);
       }
       @include tablet() {
-        width: 15%;       
-        padding: rem(0);
-      }
-      border-radius: rem(10);
-      font-weight: 700;
-
-      @include tablet() {
+        width: 15%;
         padding: rem(10) 0;
       }
       @include desktop() {
         padding: rem(20) 0;
       }
+      border-radius: rem(10);
+      font-weight: 700;
     }
+  }
+}
+
+.link {
+  background-color: white;
+  margin: rem(6) 0 rem(6) 0;
+  padding: rem(10);
+  font-family: $font-rubik;
+  border-radius: rem(10);
+  &__item {
+    display: flex;
+    @include mobil() {
+      flex-direction: column;
+    }
+    @include tablet() {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    padding: rem(10);
+    p {
+      margin: 0;
+    }
+    &__shorted {
+      color: $cyan;
+    }
+    &__btn {
+      padding: rem(8) rem(30);
+      border-radius: rem(10);
+    }
+  }
+}
+
+.shorten,
+.link {
+  position: relative;
+  @include mobil() {
+    top: -5.5rem;
+  }
+
+  @include tablet() {
+    top: -4.5rem;
   }
 }

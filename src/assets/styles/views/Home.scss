@@ -14,19 +14,22 @@
   font-family: $font-rubik;
   padding: rem(30) 0;
   @include mobil() {
+    min-height: 68vh;
     flex-direction: column-reverse;
+    justify-content: flex-end;
   }
   @include tablet() {
-    min-height: 30vh;
+    min-height: 40vh;
     flex-direction: row;
+    justify-content: flex-start;
   }
   @include desktop() {
-    min-height: 50vh;
+    min-height: 80vh;
   }
   &__info {
     display: flex;
     flex-direction: column;
-    justify-content: center;    
+    justify-content: center;
     @include mobil() {
       text-align: center;
       align-items: center;
@@ -63,22 +66,7 @@
 
 .advanced {
   font-family: $font-rubik;
-  position: relative;
-  @include mobil() {
-    min-height: 30vh;
-    bottom: -8rem;
-  }
-  @include tablet() {
-    min-height: 20vh;
-    bottom: -8rem;
-  }
-  @include desktop() {
-    min-height: 40vh;
-    bottom: -10rem;
-  }
-  @include desktoplg() {
-    min-height: 30vh;
-  }
+  padding: 0 0 rem(60) 0; 
   &__info {
     text-align: center;
     &__title {
@@ -94,18 +82,7 @@
 
 .characteristic {
   font-family: $font-rubik;
-  @include mobil() {
-    padding: rem(60) 0;
-  }
-  @include tablet() {
-    min-height: 45vh;
-  }
-  @include desktop() {
-    min-height: 60vh;
-  }
-  @include desktoplg() {
-    min-height: 50vh;
-  }
+  padding: 0 0 rem(60) 0; 
   position: relative;
   .line--green {
     position: absolute;
