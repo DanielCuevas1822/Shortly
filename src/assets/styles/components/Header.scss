@@ -5,34 +5,102 @@
 .header {
   font-family: $font-rubik;
   padding: rem(30) 0 0 0;
+  hr {
+    color: $grayish-violet;
+    margin: rem(0) rem(30);
+    @include mobil() {
+      display: block;
+    }
+    @include tablet() {
+      display: none;
+    }
+  }
   &__logo {
     display: flex;
     align-items: center;
-    img {
+    @include mobil() {
+      padding-bottom: rem(20);
+      justify-content: space-between;
+    }
+    @include tablet() {
+      padding-bottom: unset;
+    }
+    img,
+    svg {
       height: rem(28);
+    }
+    svg {
+      color: $grayish-violet;
+      @include mobil() {
+        display: block;
+      }
+      @include tablet() {
+        display: none;
+      }
     }
   }
   &__nav {
     display: flex;
     align-items: center;
+    @include mobil() {
+      justify-content: center;
+      background-color: $dark-violet;
+      border-radius: rem(10) rem(10) 0 0;
+    }
+    @include tablet() {
+      justify-content: unset;
+      background-color: white;
+    }
     &__item {
-      display: inline;
-      padding: 0 rem(15);
+      @include mobil() {
+        padding: rem(15) 0;
+        color: white;
+        text-align: center;
+      }
+      @include tablet() {
+        display: inline;
+        padding: 0 rem(15);
+        color: $grayish-violet;
+        text-align: left;
+      }
       font-weight: 700;
-      color: $grayish-violet;
     }
     ul {
       margin: 0;
       padding: 0;
+      list-style: none;
     }
   }
   &__profile {
     display: flex;
     justify-content: flex-end;
+    @include mobil() {
+      background-color: $dark-violet;
+      border-radius: 0 0 rem(10) rem(10);
+      flex-direction: column;
+    }
+    @include tablet() {
+      background-color: white;
+      flex-direction: row;
+    }
     &__signupbtn,
     &__loginbtn {
       border-radius: rem(30);
       padding: rem(10) rem(20);
+      @include mobil() {
+        margin: rem(0) rem(30) rem(30) rem(30);
+      }
+      @include tablet() {
+        margin: 0;
+      }
+    }
+  }
+  .my-d-none {
+    @include mobil() {
+      display: none;
+    }
+    @include tablet() {
+      display: flex;
     }
   }
 }
