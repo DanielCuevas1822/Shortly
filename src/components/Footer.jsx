@@ -13,10 +13,10 @@ const Footer = () => {
     <footer className="bg--dark-violet">
       <div className="container">
         <div className="row footer">
-          <div className="col-4 footer__img">
+          <div className="col-lg-4 col-md-3 col-sm-12 footer__img">
             <img className="footer__img__logo" src={logo} alt="logo" />
           </div>
-          <div className="col-5 footer__links">
+          <div className="col-lg-5 col-md-6 col-sm-12 footer__links">
             <nav className="footer__links__nav">
               <ul>
                 <p>Features</p>
@@ -42,7 +42,7 @@ const Footer = () => {
               </ul>
             </nav>
           </div>
-          <div className="col-3 footer__social">
+          <div className="col-md-3 col-sm-12 footer__social">
             <img
               className="footer__social__img"
               src={facebook}

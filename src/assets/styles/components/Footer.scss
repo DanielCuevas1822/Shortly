@@ -17,6 +17,14 @@
   }
 
   &__img {
+    @include mobil() {
+      text-align: center;
+      padding: rem(35) 0;
+    }
+    @include tablet() {
+      text-align: left;
+      padding: 0;
+    }
     &__logo {
       -webkit-filter: invert(100%);
       filter: invert(100%);
@@ -26,11 +34,25 @@
   &__links {
     &__nav {
       display: flex;
-      justify-content: space-between;
+      @include mobil() {
+        flex-direction: column;
+      }
+      @include tablet() {
+        flex-direction: row;
+        justify-content: space-between;
+      }
       ul {
         margin: 0;
         padding: 0;
         font-weight: 700;
+        @include mobil() {
+          text-align: center;
+          padding-bottom: rem(35);
+        }
+        @include tablet() {
+          text-align: left;
+          padding-bottom: rem(0);
+        }
       }
       li {
         list-style: none;
@@ -43,6 +65,12 @@
   &__social {
     display: flex;
     justify-content: space-evenly;
+    @include mobil() {
+      padding: rem(30) rem(90) rem(60) rem(90);
+    }
+    @include tablet() {
+      padding: 0;
+    }
     &__img {
       max-height: rem(25);
     }
