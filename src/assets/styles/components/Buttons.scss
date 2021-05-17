@@ -1,17 +1,13 @@
 @import "../core/variables.scss";
 @import "../core/functions.scss";
+@import "../core/mixins.scss";
 
 .btn--green {
-  background-color: $cyan;
-  color: white;
+  @include button-style-green
 }
 
 .btn--white {
   color: $grayish-violet;
   background-color: transparent;
-}
-
-.btn--green,
-.btn--white {
   border: none;
 }
