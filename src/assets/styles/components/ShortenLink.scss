@@ -40,6 +40,7 @@
       @include tablet() {
         width: 85%;
         margin-right: rem(18);
+        margin-bottom: 0;
         padding: rem(0);
       }
     }
@@ -52,6 +53,7 @@
       @include tablet() {
         width: 15%;
         padding: rem(10) 0;
+        margin-bottom: 0;
       }
       @include desktop() {
         padding: rem(20) 0;
@@ -64,7 +66,7 @@
 
 .link {
   background-color: white;
-  margin: rem(6) 0 rem(6) 0;
+  margin: rem(8) 0 rem(8) 0;
   padding: rem(10);
   font-family: $font-rubik;
   border-radius: rem(10);
