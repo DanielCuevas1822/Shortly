@@ -103,8 +103,14 @@
   }
 }
 
+.loader {
+  display: flex;
+  justify-content: center;
+}
+
 .shorten,
-.link {
+.link,
+.lds-roller {
   position: relative;
   @include mobil() {
     top: -5.5rem;
@@ -113,4 +119,8 @@
   @include tablet() {
     top: -4.5rem;
   }
+}
+
+button.copied {
+  background-color: $dark-violet;
 }
