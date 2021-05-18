@@ -1,6 +1,6 @@
 # Shortly
 
-_Shortly is a web application built in React Js. In this web application you can shorten a link. It was a [challenge proposed](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G) by the Frontend Mentor site._
+_Shortly landing page built in React Js. In this web application you can shorten a link. It was a [challenge proposed](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G) by the Frontend Mentor site._
 
 _Concepts learned in this proyect:_
 
